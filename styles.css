@@ -1,0 +1,265 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke: magenta;
+    -webkit-text-stroke-width: 1px;
+    color: transparent;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* STARTMENU STYLES */
+.startMenu, #scoreBody, #submitHighscoreBody, #gameBody {
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%,rgba(255,225,245,1) 0%,rgba(255,238,255,20) 100%);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.startMenu .menu {
+    margin-top: 2%;
+    width: 700px;
+    border-top: 2px groove magenta;
+    border-top-left-radius: 50px;
+    border-bottom: 2px dashed magenta;
+    border-bottom-right-radius: 50px;
+    height: 300px;
+}
+.startMenu .menu h2 {
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+    border-left: 2px dotted magenta;
+    border-right: 2px dotted magenta;
+}
+
+.startMenu .menu .logo {
+    width: 100%;
+    height: 50%;
+    margin: 2em 0; 
+    display: flex;
+    
+    justify-content: center;
+}
+
+.startMenu .menu .logo #bigSquare {
+    max-width: 150px;
+    min-height: 150px;
+    box-shadow: 5px 5px 2px rgba(202, 31, 123, 0.2)
+}
+
+.startMenu .menu .logo .squareContainer {
+    max-width: 100px;
+    height: 100%;
+    
+}
+
+.startMenu .menu .logo #firstSquare {
+    margin: 0.8em 0 0 1em;
+}
+
+.startMenu .menu .logo #secondSquare {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 4em 0 2em;
+}
+
+.startMenu .menu .logo #thirdSquare {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.startMenu .menu .logo .squareContainer img {
+    max-width: 60px;
+    height: 60px;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.2)
+}
+
+.startMenu .menu .menuLinks {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.gameLostChoice {
+    position: absolute;
+    top: 280px;
+    left: 550px;
+    width: 300px;
+    height: 280px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 3px 4px 8px magenta;
+    border-top: 2px solid magenta;
+    border-left: 2px solid darkmagenta;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.gameLostChoice h3,
+.startMenu .menu .menuLinks a {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.gameLostChoice h3:hover,
+.startMenu .menu .menuLinks a:hover {
+    color: magenta;
+    transition: 0.3s;
+}
+
+/* GAMEBODY STYLES */ 
+ #gameBody {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+} 
+
+#gameBody .howToPlay,
+#gameBody #log {
+    align-self: flex-start;
+    flex: 1;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+#gameBody .howToPlay h3,
+#gameBody #log h3 {
+    text-align: center;
+}
+
+#gameBody .howToPlay ul {
+    padding: 0;
+}
+
+#gameBody #log p {
+    font-size: 1.2rem;
+}
+
+#gameBody #gameCanvas {
+    border: 2px groove magenta;
+    margin: auto 0;
+    justify-self: center;
+    min-width: 800px;
+    min-height: 600px;
+}
+
+/* SCOREBODY STYLES */
+.scoreContainer {
+    height: 90%;
+    width: 70%;
+    background: #fff;
+    margin: auto 0;
+    border: 2px groove magenta;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.scoreContainer .scoreHeader {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1em;
+}
+
+.scoreContainer .scoreHeader h2,
+.scoreContainer .scoreHeader a,
+.scoreContainer .scoreHeader .filler {
+    flex: 1;    
+}
+
+.scoreContainer .scoreHeader h2 {
+    text-align: center;
+}
+
+.scoreContainer .scoreHeader i {
+    font-size: 1.5rem;
+}
+
+.scoreContainer h2 {
+    margin: 1.5em auto;
+}
+
+.scoreContainer .scoreContainers {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.scoreContainer .scoreContainers .highScoreContainer {
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    margin: 0 3em;
+    text-align: center;
+}
+
+.scoreContainer .scoreContainers .highScoreContainer h3 {
+    text-align: center;
+    border-bottom: 2px dashed magenta;
+    padding-bottom: 0.2em;
+}
+
+/* SUBMITHIGHSCORET STYLES*/ 
+#submitHighscoreBody .submitContainer {
+    width: 40%;
+    height: 48vh;
+    margin: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#submitHighscoreBody .submitContainer #scoreForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#submitHighscoreBody .submitContainer #scoreForm input {
+    border: none;
+    border-bottom: 2px groove rgba(202, 31, 123, 0.2);
+    width: 80%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#submitHighscoreBody .submitContainer #scoreForm button {
+    background: magenta;
+    color: #fff;
+    padding: 0.5em;
+    border: none;
+    font-weight: 600;
+    width: 80%;
+    font-size: 1.5rem;
+}
